@@ -6,6 +6,16 @@ package workshop.account.exception;
 public class InsufficientBalanceException extends Exception {
 	//현재 잔액
 	private int currentBalance;
+
+	public InsufficientBalanceException(String message, int currentBalance) {
+		//부모 클래스의 생성자를 호출한다.
+		super(message);
+		this.currentBalance = currentBalance;
+	}
+	
+	public int getCurrentBalance() {
+		return currentBalance;
+	}
 	
 	
 }
