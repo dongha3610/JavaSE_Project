@@ -13,7 +13,6 @@ public class Student {
 		setStudentId(studentId);
 		setName(name);
 		setMajor(major);
-		// 생성할 때도 학년 검사를 하기 위해 setter를 호출한다.
 		setGrade(grade);
 	}
 
@@ -45,7 +44,7 @@ public class Student {
 		return grade;
 	}
 
-	// 학년은 1~4 까지만 허용, 범위를 벗어나면 예외를 발생시킨다.
+	// 학년은 1~4 까지만 허용, 범위를 벗어나면 예외를 발생.
 	public void setGrade(int grade) throws InvalidGradeException {
 		if (grade < 1 || grade > 4) {
 			throw new InvalidGradeException("학년은 1~4 사이의 값이어야 합니다.");
