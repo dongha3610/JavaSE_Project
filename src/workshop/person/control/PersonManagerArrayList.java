@@ -9,7 +9,6 @@ public class PersonManagerArrayList {
 	public static void main(String[] args) {
 		PersonManagerArrayList pManager = new PersonManagerArrayList();
 		//PersonEntity 배열 선언 및 생성
-		//PersonEntity[] persons = new PersonEntity[10];
 		List<PersonEntity> persons = new ArrayList<>();
 		pManager.fillPersons(persons);
 		pManager.showPersons(persons);
