@@ -1,6 +1,6 @@
 package workshop.book.entity;
 
-//잡지을 나타내는 자식 클래스
+//잡지를 나타내는 자식 클래스
 public class Magazine extends Publication{
 	//상속받은 속성이 아니라 Magazine이 가지는 독자적인 속성임
 	private String publishingPeriod;
