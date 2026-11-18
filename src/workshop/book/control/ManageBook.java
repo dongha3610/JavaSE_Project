@@ -42,6 +42,16 @@ public class ManageBook {
 		for (Publication publication : pubs) {
 			System.out.println(publication);
 		}
+		
+		Publication pub3 = pubs[2];
+		System.out.println("=== 가격 변경 전 ===");
+		System.out.println(pub3.getTitle() + " " + pub3.getPrice());
+		
+		modifyPrice(pub3);
+		
+		System.out.println("=== 가격 변경 후 ===");
+		System.out.println(pub3.getTitle() + " " + pub3.getPrice());
+		
 				
 	}//main
 	
@@ -52,6 +62,14 @@ public class ManageBook {
 		if(pub instanceof Magazine) {
 			rate = 0.6;
 		}
+		if(pub instanceof Novel) {
+			rate = 0.8;
+		}
+		if(pub instanceof ReferenceBook) {
+			rate = 0.9;
+		}
+		
+		pub.setPrice((int)(pub.getPrice() * rate));
 	}
 	
 	/*
